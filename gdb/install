@@ -1,0 +1,2 @@
+cp ./gdbinit ~/.gdbinit
+touch ~/.gdbinit.local

@@ -1,0 +1,13 @@
+sudo apt-get purge bind9
+sudo apt-get install bind9
+
+dir=.
+for f in "$dir"/*; do
+	if [ -d "$f" ]; then
+ 		./$f/install
+ 	fi
+done
+
+
+sudo apt-get update
+sudo apt-get upgrade

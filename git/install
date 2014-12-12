@@ -1,0 +1,5 @@
+sudo apt-get install git
+cd git/
+ls -al
+./git_config
+cd ..
