@@ -11,3 +11,4 @@ done
 
 sudo apt-get update
 sudo apt-get upgrade
+./is_installed.bash
