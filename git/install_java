@@ -1,0 +1,44 @@
+#!/bin/bash
+#請到Oracle手動下載JDK壓縮檔，JDK壓縮檔當參數執行此script
+#記得要用sudo，設定完JDK會自動安裝Android Studio
+#如果最後有出現java版本資訊就代表JDK安裝成功
+#最後請手動重新開機
+#安裝路徑
+des="/usr/local/java"
+profile="/etc/profile"
+#檢查sudo
+if [ "$EUID" -ne 0 ]; then
+	echo "please run as root"
+	exit
+fi
+#檢查有沒有少參數
+if [ "$#" != 1 ]; then
+	echo "Parameter missing"
+	exit
+fi
+#檢查是不是已經有這個路徑了
+if [ -d "$des" ]; then
+	echo "\"$des\" already exist"
+	exit
+else
+	mkdir "$des"
+fi
+#解壓縮-C目的
+tar -xvzf "$1" -C "$des/"
+#解壓縮後資料夾名稱
+jdk=$(ls $des | grep $1)
+if [ "$jdk" == "" ]; then
+	echo "Can't find JDK directory"
+	exit
+fi
+echo "JAVA_HOME=/usr/local/java/$jdk" >> "$profile"
+echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> "$profile"
+echo "export JAVA_HOME" >> "$profile"
+echo "export PATH" >> "$profile"
+update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/$jdk/bin/java" 1
+update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/java/$jdk/bin/javac" 1
+source /etc/profile
+
+java -version
+
+echo "Please reboot your computer"

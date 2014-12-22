@@ -1,5 +1,9 @@
+#!/bin/bash
 sudo apt-get install git
 cd git/
 ls -al
 ./git_config
+./download_java
+./install_java jdk-8u25-linux-x64.tar.gz
+./install_smartgit
 cd ..
