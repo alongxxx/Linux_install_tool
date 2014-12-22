@@ -1,3 +1,3 @@
 sudo mv ~/桌面/ ~/desktop/
-sed -i "s/桌面/desktop/g" ~./config/user-dirs.dirs 
-rm -rf user-dirs.dirse
+sed -i "s/桌面/desktop/g" ~/.config/user-dirs.dirs 
+rm -rf ~/.config/user-dirs.dirse
