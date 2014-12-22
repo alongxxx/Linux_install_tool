@@ -1,0 +1,12 @@
+meld               [32m✔  [0m
+git                [32m✔  [0m
+smartgithg         [32m✔  [0m
+htop               [32m✔  [0m
+vim                [32m✔  [0m
+terminator         [32m✔  [0m
+gnuplot            [32m✔  [0m
+g++                [32m✔  [0m
+gcc                [32m✔  [0m
+python3            [32m✔  [0m
+silversearcher-ag  [32m✔  [0m
+variety            [31m✘  [0m
