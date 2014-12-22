@@ -80,10 +80,11 @@ for f in "$dir"/*; do
  			elif [ $prog_name = "variety" ];then
  				if [ ! -f /opt/extras.ubuntu.com/variety/bin/variety ]; then
     					echo -e "$prog_name\t\t\t$(echo_fail)" >> output.temp
-    					#$echo_fail
 				else
 					echo -e "$prog_name\t\t\t$(echo_pass)" >> output.temp
 				fi
+			elif [ $prog_name = "default-jdk" ];then
+				echo -e "$prog_name\t\t\t$(echo_if $(program_is_installed java))" >> output.temp
  			else
    	 			echo -e "$prog_name\t\t\t$(echo_if $(program_is_installed $prog_name))" >> output.temp
    	 		fi
