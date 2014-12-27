@@ -1,2 +1,5 @@
-cp ./gdbinit ~/.gdbinit
+cd gdb/
+cp dotfiles/.gdbinit ~/.gdbinit
+cp -r dotfiles/ ~/
 touch ~/.gdbinit.local
+cd ..

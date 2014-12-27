@@ -4,3 +4,6 @@ sudo apt-get install gnuplot
 sudo apt-get install g++
 sudo apt-get install gcc
 sudo apt-get install python3
+cd other/
+cp .bashrc ~/.bashrc 
+cd ..

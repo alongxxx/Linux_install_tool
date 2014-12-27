@@ -72,7 +72,9 @@ function echo_if {
 dir=.
 for f in "$dir"/*; do
 	if [ -d "$f" ]; then    #check if $f is a directory
- 		sed -n 's/^sudo apt-get install \(.*\)$/\1/p' $f/* >> temp
+ 		#sed -n 's/^sudo apt-get install \(.*\)$/\1/p' $(find $f/ -type f -exec {} +) >> temp
+		find $f/ -type f -exec \
+    sed -n 's/^sudo apt-get install \(.*\)$/\1/p' {} + >>temp	#find all the file inside every dir which contain  sudo apt-get install...
  		#echo $prog_name
  		while read prog_name; do 
  			if [ $prog_name = "silversearcher-ag" ];then
