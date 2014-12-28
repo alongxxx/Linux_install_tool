@@ -8,7 +8,7 @@ Just simply type :
 
 
 #check#
-If you want to check whether the tool is installed before :
+If you want to check whether the tool is installed :
 
 Just simply type :
 
