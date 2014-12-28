@@ -1,6 +1,6 @@
-This paackage is collect some useful linux tool that you can install by :
+This paackage includes some useful linux tool :
 
-#Installation#
+##Installation##
 
 Just simply type :
 
