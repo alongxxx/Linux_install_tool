@@ -11,3 +11,5 @@ If you want to check whether the tool is installed before :
 
 Just simply type :
 	./is_installed.bash
+
+![ScreenShot](https://github.com/alongxxx/Linux_install_tool/blob/master/screenshot.png)
