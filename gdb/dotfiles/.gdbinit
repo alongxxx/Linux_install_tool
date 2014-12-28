@@ -2,10 +2,10 @@
 # Random tweaks that makes my gdb life easier.
 ################################################################################
 
-source ~/dotfiles/stl-views.gdb
-source ~/dotfiles/dasdb.gdb
-source ~/dotfiles/jml.gdb
-source ~/dotfiles/colors.gdb
+source ~/.dotfiles/stl-views.gdb
+source ~/.dotfiles/dasdb.gdb
+source ~/.dotfiles/jml.gdb
+source ~/.dotfiles/colors.gdb
 
 
 set disassembly-flavor intel
