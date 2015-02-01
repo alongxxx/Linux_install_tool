@@ -1,0 +1,4 @@
+sudo apt-get install conky 
+sudo apt-get install curl
+cd && wget -O harmattan.sh http://drive.noobslab.com/data/conky/Harmattan/harmattan.sh
+cd && chmod +x harmattan.sh && ./harmattan.sh
