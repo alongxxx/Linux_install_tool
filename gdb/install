@@ -1,6 +1,6 @@
 cd gdb/
-ls
 cp dotfiles/.gdbinit ~/.gdbinit
+mkdir ~/.dotfiles/
 cp -r dotfiles/* ~/.dotfiles/
 touch ~/.gdbinit.local
 cd ..
